@@ -7,8 +7,8 @@ OTIMIZATIONS ?= -msse -msse2 -mfpmath=sse -ffast-math -fomit-frame-pointer -O3 -
 PREFIX ?= /usr/local
 CFLAGS ?= $(OPTIMIZATIONS) -Wall
 LIBDIR ?= lib
+STRIP  ?= strip
 
-STRIP=strip
 STRIPFLAGS=-s
 
 stereoroute_VERSION?=$(shell git describe --tags HEAD 2>/dev/null | sed 's/-g.*$$//;s/^v//' || echo "LV2")
