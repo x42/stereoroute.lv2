@@ -99,6 +99,22 @@ run(LV2_Handle instance, uint32_t n_samples)
 				memcpy (self->output[1], self->input[1], n_samples * sizeof(float));
 			}
 			break;
+		case 7:
+			// left/right -> mid/side
+			for (uint32_t s = 0; s < n_samples; ++s) {
+				const float tmpS = self->input[0][s] - self->input[1][s];
+				self->output[0][s] = .5 * (self->input[0][s] + self->input[1][s]);
+				self->output[1][s] = .5 * tmpS;
+			}
+			break;
+		case 8:
+			// mid/side <> left/right
+			for (uint32_t s = 0; s < n_samples; ++s) {
+				const float tmpS = self->input[0][s] - self->input[1][s];
+				self->output[0][s] = (self->input[0][s] + self->input[1][s]);
+				self->output[1][s] = tmpS;
+			}
+			break;
 	}
 }
 

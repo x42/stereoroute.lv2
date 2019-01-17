@@ -50,6 +50,12 @@
 		] , [
 			rdfs:label "L->L, R->R (Straight)" ;
 			rdf:value 6
+		] , [
+			rdfs:label "L+R/2, L-R/2 (to Mid/Side)" ;
+			rdf:value 7
+		] , [
+			rdfs:label "L+R, L-R (from Mid/Side)" ;
+			rdf:value 8
 		]
 	] , [
 		a lv2:AudioPort ,
