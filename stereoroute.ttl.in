@@ -48,7 +48,7 @@
 			rdfs:label "L->R, R->L (Swap Channels)" ;
 			rdf:value 5
 		] , [
-			rdfs:label "L->L, R->R (Straight)" ;
+			rdfs:label "L->L, R->R (Straight Bypass)" ;
 			rdf:value 6
 		] , [
 			rdfs:label "L+R/2, L-R/2 (to Mid/Side)" ;
