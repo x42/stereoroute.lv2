@@ -27,34 +27,34 @@
 		lv2:name "Channel Assignment";
 		lv2:default 0 ;
 		lv2:minimum 0 ;
-		lv2:maximum 6 ;
+		lv2:maximum 8 ;
 		lv2:portProperty lv2:enumeration, lv2:integer;
 		lv2:scalePoint [
-			rdfs:label "Downmix to Mono (-3dB)" ;
+			rdfs:label "Downmix to Mono -3dB (Equal Power)" ;
 			rdf:value 0
 		] , [
-			rdfs:label "Downmix to Mono (-6dB)" ;
+			rdfs:label "Downmix to Mono -6dB (Equal Amplitude)" ;
 			rdf:value 1
 		] , [
-			rdfs:label "Downmix to Mono (0dB)" ;
+			rdfs:label "Downmix to Mono -0dB (Sum Channels)" ;
 			rdf:value 2
 		] , [
-			rdfs:label "L->L, L->R (Left Channel Mono)" ;
+			rdfs:label "Route Left Only: L->L, L->R" ;
 			rdf:value 3
 		] , [
-			rdfs:label "R->R, R->L (Right Channel Mono)" ;
+			rdfs:label "Route Right Only: R->R, R->L" ;
 			rdf:value 4
 		] , [
-			rdfs:label "L->R, R->L (Swap Channels)" ;
+			rdfs:label "Swap Channels: L->R, R->L" ;
 			rdf:value 5
 		] , [
-			rdfs:label "L->L, R->R (Straight Bypass)" ;
+			rdfs:label "No-OP: L->L, R->R (Straight Bypass)" ;
 			rdf:value 6
 		] , [
-			rdfs:label "L+R/2, L-R/2 (to Mid/Side)" ;
+			rdfs:label "M/S: (L+R)/2, (L-R)/2 (to Mid/Side)" ;
 			rdf:value 7
 		] , [
-			rdfs:label "L+R, L-R (from Mid/Side)" ;
+			rdfs:label "M/S: (L+R), (L-R) (from Mid/Side)" ;
 			rdf:value 8
 		]
 	] , [
