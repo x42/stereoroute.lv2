@@ -21,7 +21,12 @@
 #include <string.h>
 #include <math.h>
 
-#include "lv2/lv2plug.in/ns/lv2core/lv2.h"
+#ifdef HAVE_LV2_1_18_6
+#include <lv2/lv2core/lv2.h>
+#else
+#include <lv2/lv2plug.in/ns/lv2core/lv2.h>
+#endif
+
 #define MNR_URI "http://gareus.org/oss/lv2/stereoroute"
 
 typedef enum {
